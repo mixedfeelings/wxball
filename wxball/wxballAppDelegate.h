@@ -8,8 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface wxballAppDelegate : NSObject <NSApplicationDelegate>
+@interface wxballAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate> {
+    
+    IBOutlet NSMenu *statusMenu;
+    NSImage *statusImage;
+    NSStatusItem *statusItem;
+    
+}
 
-@property (assign) IBOutlet NSWindow *window;
+//@property (assign) IBOutlet NSWindow *window;
+
+-(IBAction)loadStatus:(id)sender;
 
 @end
+
+
