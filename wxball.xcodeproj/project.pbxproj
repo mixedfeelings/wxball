@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E7E456117755A770016D15C /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7E456017755A770016D15C /* PreferencePanes.framework */; };
 		5E940FD51772D304005A2D34 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCC1772D304005A2D34 /* black.png */; };
 		5E940FD61772D304005A2D34 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCD1772D304005A2D34 /* blue.png */; };
 		5E940FD71772D304005A2D34 /* blue_blink.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCE1772D304005A2D34 /* blue_blink.png */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E7E456017755A770016D15C /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
 		5E940FCC1772D304005A2D34 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
 		5E940FCD1772D304005A2D34 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		5E940FCE1772D304005A2D34 /* blue_blink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_blink.png; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E7E456117755A770016D15C /* PreferencePanes.framework in Frameworks */,
 				5E9AEACB1766CC40008A820C /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +86,7 @@
 		5E9AEABE1766CC40008A820C = {
 			isa = PBXGroup;
 			children = (
+				5E7E456017755A770016D15C /* PreferencePanes.framework */,
 				5E9AEAD01766CC40008A820C /* wxball */,
 				5E9AEAC91766CC40008A820C /* Frameworks */,
 				5E9AEAC81766CC40008A820C /* Products */,

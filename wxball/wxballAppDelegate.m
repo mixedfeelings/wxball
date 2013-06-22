@@ -48,6 +48,35 @@
     return YES;
 }
 
+-(IBAction)checkBoxNotificationsState:(id)sender {
+    
+    if ([checkNotifications state] == NSOffState) {
+        
+        NSLog(@"off");
+    
+    } else {
+    
+        NSLog(@"on");
+    
+    }
+
+}
+
+-(IBAction)checkBoxLoadStartState:(id)sender {
+    
+    if ([checkLoadStart state] == NSOffState) {
+        
+        NSLog(@"load");
+        
+    } else {
+        
+        NSLog(@"don't load");
+        
+    }
+    
+}
+
+
 -(IBAction)loadStatus:(id)sender {
     
     NSBundle *bundle = [NSBundle mainBundle];
