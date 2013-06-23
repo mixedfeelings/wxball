@@ -7,7 +7,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <PreferencePanes/NSPreferencePane.h>
 
 @interface wxballAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate> {
     
@@ -19,7 +18,7 @@
     NSWindow *preferences;
 }
 
-@property (assign) IBOutlet NSWindow *preferences;
+//@property (assign) IBOutlet NSWindow *window;
 
 -(IBAction)loadStatus:(id)sender;
 -(IBAction)checkBoxNotificationsState:(id)sender;

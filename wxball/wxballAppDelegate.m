@@ -49,15 +49,18 @@
 }
 
 -(IBAction)checkBoxNotificationsState:(id)sender {
-    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([checkNotifications state] == NSOffState) {
         
-        NSLog(@"off");
+        NSString *notify=@"no";
+        [defaults setObject:notify forKey:@"Notify"];
+        [defaults synchronize];
     
     } else {
     
-        NSLog(@"on");
-    
+        NSString *notify=@"yes";
+        [defaults setObject:notify forKey:@"Notify"];
+        [defaults synchronize];
     }
 
 }
@@ -81,7 +84,7 @@
     
     NSBundle *bundle = [NSBundle mainBundle];
 
-    NSString *url=@"http://george.wietor.com/labs/wxball/status/json";
+    NSString *url=@"http://george.wietor.com/labs/wxball/status/json/test";
     
     NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
@@ -114,65 +117,68 @@
 
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             NSString *lastStatus = [defaults objectForKey:@"lastStatus"];
+            NSString *Notify = [defaults objectForKey:@"Notify"];
             
-            //NSLog(@" %@", lastStatus);
+            NSLog(@" %@", Notify);
             //NSLog(@" %@", status);
             
             if (floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_7) {
-
-                if (![lastStatus isEqualToString:status]) {
-                    if ([blink isEqualToString:@"0"]) {
-                        
-                        if ([color isEqualToString:@"1"]) {
+                if ([Notify isEqualToString:@"yes"]) {
+                    if (![lastStatus isEqualToString:status]) {
+                        if ([blink isEqualToString:@"0"]) {
                             
-                            NSUserNotification *notification = [[NSUserNotification alloc] init];
-                            notification.title = @"wxball";
-                            notification.informativeText = [NSString stringWithFormat:@"Weather ball red, warmer weather ahead"];
-                            [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+                            if ([color isEqualToString:@"1"]) {
+                                
+                                NSUserNotification *notification = [[NSUserNotification alloc] init];
+                                notification.title = @"wxball";
+                                notification.informativeText = [NSString stringWithFormat:@"Weather ball red, warmer weather ahead"];
+                                [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+                                
+                                
+                            } if ([color isEqualToString:@"2"]) {
+                                
+                                NSUserNotification *notification = [[NSUserNotification alloc] init];
+                                notification.title = @"wxball";
+                                notification.informativeText = [NSString stringWithFormat:@"Weather ball green, no change forseen"];
+                                [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+                                
+                            } if ([color isEqualToString:@"3"]) {
+                                
+                                NSUserNotification *notification = [[NSUserNotification alloc] init];
+                                notification.title = @"wxball";
+                                notification.informativeText = [NSString stringWithFormat:@"Weather ball blue, colder weather in view"];
+                                [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+                                
+                            }
                             
+                        } else {
                             
-                        } if ([color isEqualToString:@"2"]) {
-                            
-                            NSUserNotification *notification = [[NSUserNotification alloc] init];
-                            notification.title = @"wxball";
-                            notification.informativeText = [NSString stringWithFormat:@"Weather ball green, no change forseen"];
-                            [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
-                            
-                        } if ([color isEqualToString:@"3"]) {
-                            
-                            NSUserNotification *notification = [[NSUserNotification alloc] init];
-                            notification.title = @"wxball";
-                            notification.informativeText = [NSString stringWithFormat:@"Weather ball blue, colder weather in view"];
-                            [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+                            if ([color isEqualToString:@"1"]) {
+                                
+                                NSUserNotification *notification = [[NSUserNotification alloc] init];
+                                notification.title = @"wxball";
+                                notification.informativeText = [NSString stringWithFormat:@"Weather ball red, warmer weather ahead / Colors blinking bright, rain or snow in sight"];
+                                [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+                                
+                            } if ([color isEqualToString:@"2"]) {
+                                
+                                NSUserNotification *notification = [[NSUserNotification alloc] init];
+                                notification.title = @"wxball";
+                                notification.informativeText = [NSString stringWithFormat:@"Weather ball green, no change forseen / Colors blinking bright, rain or snow in sight"];
+                                [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+                                
+                                
+                            } if ([color isEqualToString:@"3"]) {
+                                
+                                NSUserNotification *notification = [[NSUserNotification alloc] init];
+                                notification.title = @"wxball";
+                                notification.informativeText = [NSString stringWithFormat:@"Weather ball blue, colder weather in view / Colors blinking bright, rain or snow in sight"];
+                                [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+                                
+                            }
                             
                         }
-                        
-                    } else {
-                        
-                        if ([color isEqualToString:@"1"]) {
-                            
-                            NSUserNotification *notification = [[NSUserNotification alloc] init];
-                            notification.title = @"wxball";
-                            notification.informativeText = [NSString stringWithFormat:@"Weather ball red, warmer weather ahead / Colors blinking bright, rain or snow in sight"];
-                            [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
-                            
-                        } if ([color isEqualToString:@"2"]) {
-                            
-                            NSUserNotification *notification = [[NSUserNotification alloc] init];
-                            notification.title = @"wxball";
-                            notification.informativeText = [NSString stringWithFormat:@"Weather ball green, no change forseen / Colors blinking bright, rain or snow in sight"];
-                            [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
-                            
-                            
-                        } if ([color isEqualToString:@"3"]) {
-                            
-                            NSUserNotification *notification = [[NSUserNotification alloc] init];
-                            notification.title = @"wxball";
-                            notification.informativeText = [NSString stringWithFormat:@"Weather ball blue, colder weather in view / Colors blinking bright, rain or snow in sight"];
-                            [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
-                            
-                        }
-                        
+                    
                     }
 
                 }
