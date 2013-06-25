@@ -7,6 +7,8 @@
 //
 
 #import "wxballAppDelegate.h"
+#import <ServiceManagement/ServiceManagement.h>
+
 
 @implementation wxballAppDelegate
 
@@ -22,6 +24,11 @@
     [statusItem setHighlightMode:YES];
     [statusItem setEnabled:YES];
     [statusItem setMenu:statusMenu];
+    
+    BOOL startedAtLogin = NO;
+    for (NSString *arg in [[NSProcessInfo processInfo] arguments]) {
+        if ([arg isEqualToString:@"launchWxball"]) startedAtLogin = YES;
+    }
 
 }
 
@@ -50,6 +57,7 @@
 
 -(IBAction)checkBoxNotificationsState:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
     if ([checkNotifications state] == NSOffState) {
         
         NSString *notify=@"no";
@@ -65,16 +73,39 @@
 
 }
 
+
 -(IBAction)checkBoxLoadStartState:(id)sender {
-    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
     if ([checkLoadStart state] == NSOffState) {
         
-        NSLog(@"load");
+        NSString *notify=@"no";
+        [defaults setObject:notify forKey:@"loadStart"];
+        [defaults synchronize];
+        if (!SMLoginItemSetEnabled ((__bridge CFStringRef)@"com.timschroeder.LaunchAtLoginHelperApp", NO)) {
+            NSAlert *alert = [NSAlert alertWithMessageText:@"An error ocurred"
+                                             defaultButton:@"OK"
+                                           alternateButton:nil
+                                               otherButton:nil
+                                 informativeTextWithFormat:@"Couldn't remove Helper App from launch at login item list."];
+            [alert runModal];
+        }
+        
         
     } else {
         
-        NSLog(@"don't load");
-        
+        NSString *notify=@"yes";
+        [defaults setObject:notify forKey:@"loadStart"];
+        [defaults synchronize];
+        if (!SMLoginItemSetEnabled ((__bridge CFStringRef)@"com.timschroeder.LaunchAtLoginHelperApp", YES)) {
+            NSAlert *alert = [NSAlert alertWithMessageText:@"An error ocurred"
+                                             defaultButton:@"OK"
+                                           alternateButton:nil
+                                               otherButton:nil
+                                 informativeTextWithFormat:@"Couldn't add Helper App to launch at login item list."];
+            [alert runModal];
+        }
+
     }
     
 }
@@ -119,7 +150,7 @@
             NSString *lastStatus = [defaults objectForKey:@"lastStatus"];
             NSString *Notify = [defaults objectForKey:@"Notify"];
             
-            NSLog(@" %@", Notify);
+            //NSLog(@" %@", Notify);
             //NSLog(@" %@", status);
             
             if (floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_7) {

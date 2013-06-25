@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E7E456117755A770016D15C /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7E456017755A770016D15C /* PreferencePanes.framework */; };
 		5E940FD51772D304005A2D34 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCC1772D304005A2D34 /* black.png */; };
 		5E940FD61772D304005A2D34 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCD1772D304005A2D34 /* blue.png */; };
 		5E940FD71772D304005A2D34 /* blue_blink.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCE1772D304005A2D34 /* blue_blink.png */; };
@@ -24,10 +23,35 @@
 		5E9AEADB1766CC40008A820C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5E9AEAD91766CC40008A820C /* Credits.rtf */; };
 		5E9AEADE1766CC40008A820C /* wxballAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9AEADD1766CC40008A820C /* wxballAppDelegate.m */; };
 		5E9AEAE11766CC40008A820C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9AEADF1766CC40008A820C /* MainMenu.xib */; };
+		5EF3D9DD17781A610002D88F /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF3D9DC17781A610002D88F /* ServiceManagement.framework */; };
+		5EF3D9DE17781A670002D88F /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF3D9D817780B890002D88F /* ApplicationServices.framework */; };
+		5EF3DA0F17781CC70002D88F /* wxballHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EF3DA0D17781C470002D88F /* wxballHelper.app */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5EF3DA0C17781C470002D88F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EF3DA0817781C460002D88F /* wxballHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5EF3D9E817781C460002D88F;
+			remoteInfo = wxballHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5EF3DA0E17781C940002D88F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/Loginitems;
+			dstSubfolderSpec = 1;
+			files = (
+				5EF3DA0F17781CC70002D88F /* wxballHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		5E7E456017755A770016D15C /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
 		5E940FCC1772D304005A2D34 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
 		5E940FCD1772D304005A2D34 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		5E940FCE1772D304005A2D34 /* blue_blink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_blink.png; sourceTree = "<group>"; };
@@ -51,6 +75,10 @@
 		5E9AEADC1766CC40008A820C /* wxballAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wxballAppDelegate.h; sourceTree = "<group>"; };
 		5E9AEADD1766CC40008A820C /* wxballAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wxballAppDelegate.m; sourceTree = "<group>"; };
 		5E9AEAE01766CC40008A820C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5EF3D9D817780B890002D88F /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		5EF3D9DC17781A610002D88F /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		5EF3DA0817781C460002D88F /* wxballHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wxballHelper.xcodeproj; path = wxballHelper/wxballHelper.xcodeproj; sourceTree = "<group>"; };
+		5EF3DA1017781CE70002D88F /* wxball.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = wxball.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E7E456117755A770016D15C /* PreferencePanes.framework in Frameworks */,
+				5EF3D9DD17781A610002D88F /* ServiceManagement.framework in Frameworks */,
 				5E9AEACB1766CC40008A820C /* Cocoa.framework in Frameworks */,
+				5EF3D9DE17781A670002D88F /* ApplicationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +115,9 @@
 		5E9AEABE1766CC40008A820C = {
 			isa = PBXGroup;
 			children = (
-				5E7E456017755A770016D15C /* PreferencePanes.framework */,
+				5EF3DA0817781C460002D88F /* wxballHelper.xcodeproj */,
+				5EF3D9DC17781A610002D88F /* ServiceManagement.framework */,
+				5EF3D9D817780B890002D88F /* ApplicationServices.framework */,
 				5E9AEAD01766CC40008A820C /* wxball */,
 				5E9AEAC91766CC40008A820C /* Frameworks */,
 				5E9AEAC81766CC40008A820C /* Products */,
@@ -123,6 +154,7 @@
 		5E9AEAD01766CC40008A820C /* wxball */ = {
 			isa = PBXGroup;
 			children = (
+				5EF3DA1017781CE70002D88F /* wxball.entitlements */,
 				5E940FDE1772D485005A2D34 /* wxball.iconset */,
 				5E940FCB1772D304005A2D34 /* status */,
 				5E9AEADC1766CC40008A820C /* wxballAppDelegate.h */,
@@ -145,6 +177,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5EF3DA0917781C460002D88F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EF3DA0D17781C470002D88F /* wxballHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +195,7 @@
 				5E9AEAC31766CC40008A820C /* Sources */,
 				5E9AEAC41766CC40008A820C /* Frameworks */,
 				5E9AEAC51766CC40008A820C /* Resources */,
+				5EF3DA0E17781C940002D88F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -185,12 +226,28 @@
 			mainGroup = 5E9AEABE1766CC40008A820C;
 			productRefGroup = 5E9AEAC81766CC40008A820C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5EF3DA0917781C460002D88F /* Products */;
+					ProjectRef = 5EF3DA0817781C460002D88F /* wxballHelper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5E9AEAC61766CC40008A820C /* wxball */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5EF3DA0D17781C470002D88F /* wxballHelper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = wxballHelper.app;
+			remoteRef = 5EF3DA0C17781C470002D88F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5E9AEAC51766CC40008A820C /* Resources */ = {
@@ -301,7 +358,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -317,6 +374,7 @@
 		5E9AEAE51766CC40008A820C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = wxball/wxball.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wxball/wxball-Prefix.pch";
@@ -330,6 +388,7 @@
 		5E9AEAE61766CC40008A820C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = wxball/wxball.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wxball/wxball-Prefix.pch";

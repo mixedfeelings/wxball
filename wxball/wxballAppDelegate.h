@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "StartAtLoginController.h"
+
 
 @interface wxballAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate> {
     
@@ -23,6 +25,9 @@
 -(IBAction)loadStatus:(id)sender;
 -(IBAction)checkBoxNotificationsState:(id)sender;
 -(IBAction)checkBoxLoadStartState:(id)sender;
+-(IBAction)toggleLaunchAtLogin:(id)sender;
+
+
 
 @end
 
