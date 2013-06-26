@@ -1,5 +1,5 @@
 // strings used by LLManager and LaunchAtLoginHelper
 //
 
-#define LLURLScheme @"wietor.wxball.wxball"
+#define LLURLScheme @"wxball"
 #define LLHelperBundleIdentifier @"wietor.wxball.wxballhelper"

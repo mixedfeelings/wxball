@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "StartAtLoginController.h"
+#import "LLManager.h"
 
 
 @interface wxballAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate> {

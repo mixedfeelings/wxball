@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E1ABDF6177B982B00E2857A /* LLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1ABDF5177B982B00E2857A /* LLManager.m */; };
-		5E1ABE00177B9A8C00E2857A /* LaunchAtLoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5E1ABDF9177B982B00E2857A /* LaunchAtLoginHelper.app */; };
+		5E8996E2177B9F0D004ED888 /* LLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8996E0177B9F0D004ED888 /* LLManager.m */; };
+		5E8996E6177B9F3F004ED888 /* LaunchAtLoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5E8996E5177B9F0D004ED888 /* LaunchAtLoginHelper.app */; };
 		5E940FD51772D304005A2D34 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCC1772D304005A2D34 /* black.png */; };
 		5E940FD61772D304005A2D34 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCD1772D304005A2D34 /* blue.png */; };
 		5E940FD71772D304005A2D34 /* blue_blink.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCE1772D304005A2D34 /* blue_blink.png */; };
@@ -30,18 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5E1ABDF8177B982B00E2857A /* PBXContainerItemProxy */ = {
+		5E8996E4177B9F0D004ED888 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5E1ABDF1177B982B00E2857A /* LaunchAtLoginHelper.xcodeproj */;
+			containerPortal = 5E8996DC177B9F0D004ED888 /* LaunchAtLoginHelper.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 734C379415414CE200994189;
-			remoteInfo = LaunchAtLoginHelper;
-		};
-		5E1ABDFC177B986500E2857A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5E1ABDF1177B982B00E2857A /* LaunchAtLoginHelper.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 734C379315414CE200994189;
 			remoteInfo = LaunchAtLoginHelper;
 		};
 /* End PBXContainerItemProxy section */
@@ -53,17 +46,17 @@
 			dstPath = Contents/Library/Loginitems;
 			dstSubfolderSpec = 1;
 			files = (
-				5E1ABE00177B9A8C00E2857A /* LaunchAtLoginHelper.app in CopyFiles */,
+				5E8996E6177B9F3F004ED888 /* LaunchAtLoginHelper.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5E1ABDF0177B982B00E2857A /* LLStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLStrings.h; path = LaunchAtLogin/LLStrings.h; sourceTree = "<group>"; };
-		5E1ABDF1177B982B00E2857A /* LaunchAtLoginHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LaunchAtLoginHelper.xcodeproj; path = LaunchAtLogin/LaunchAtLoginHelper.xcodeproj; sourceTree = "<group>"; };
-		5E1ABDF4177B982B00E2857A /* LLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLManager.h; path = LaunchAtLogin/LLManager.h; sourceTree = "<group>"; };
-		5E1ABDF5177B982B00E2857A /* LLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLManager.m; path = LaunchAtLogin/LLManager.m; sourceTree = "<group>"; };
+		5E8996DC177B9F0D004ED888 /* LaunchAtLoginHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LaunchAtLoginHelper.xcodeproj; path = wxball/LaunchAtLogin/LaunchAtLoginHelper.xcodeproj; sourceTree = "<group>"; };
+		5E8996DF177B9F0D004ED888 /* LLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLManager.h; path = wxball/LaunchAtLogin/LLManager.h; sourceTree = "<group>"; };
+		5E8996E0177B9F0D004ED888 /* LLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLManager.m; path = wxball/LaunchAtLogin/LLManager.m; sourceTree = "<group>"; };
+		5E8996E1177B9F0D004ED888 /* LLStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLStrings.h; path = wxball/LaunchAtLogin/LLStrings.h; sourceTree = "<group>"; };
 		5E940FCC1772D304005A2D34 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
 		5E940FCD1772D304005A2D34 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		5E940FCE1772D304005A2D34 /* blue_blink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_blink.png; sourceTree = "<group>"; };
@@ -106,10 +99,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E1ABDF2177B982B00E2857A /* Products */ = {
+		5E8996DD177B9F0D004ED888 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5E1ABDF9177B982B00E2857A /* LaunchAtLoginHelper.app */,
+				5E8996E5177B9F0D004ED888 /* LaunchAtLoginHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,10 +127,10 @@
 		5E9AEABE1766CC40008A820C = {
 			isa = PBXGroup;
 			children = (
-				5E1ABDF0177B982B00E2857A /* LLStrings.h */,
-				5E1ABDF1177B982B00E2857A /* LaunchAtLoginHelper.xcodeproj */,
-				5E1ABDF4177B982B00E2857A /* LLManager.h */,
-				5E1ABDF5177B982B00E2857A /* LLManager.m */,
+				5E8996DC177B9F0D004ED888 /* LaunchAtLoginHelper.xcodeproj */,
+				5E8996DF177B9F0D004ED888 /* LLManager.h */,
+				5E8996E0177B9F0D004ED888 /* LLManager.m */,
+				5E8996E1177B9F0D004ED888 /* LLStrings.h */,
 				5EF3D9DC17781A610002D88F /* ServiceManagement.framework */,
 				5EF3D9D817780B890002D88F /* ApplicationServices.framework */,
 				5E9AEAD01766CC40008A820C /* wxball */,
@@ -214,7 +207,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				5E1ABDFD177B986500E2857A /* PBXTargetDependency */,
 			);
 			name = wxball;
 			productName = wxball;
@@ -243,8 +235,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 5E1ABDF2177B982B00E2857A /* Products */;
-					ProjectRef = 5E1ABDF1177B982B00E2857A /* LaunchAtLoginHelper.xcodeproj */;
+					ProductGroup = 5E8996DD177B9F0D004ED888 /* Products */;
+					ProjectRef = 5E8996DC177B9F0D004ED888 /* LaunchAtLoginHelper.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -255,11 +247,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		5E1ABDF9177B982B00E2857A /* LaunchAtLoginHelper.app */ = {
+		5E8996E5177B9F0D004ED888 /* LaunchAtLoginHelper.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = LaunchAtLoginHelper.app;
-			remoteRef = 5E1ABDF8177B982B00E2857A /* PBXContainerItemProxy */;
+			remoteRef = 5E8996E4177B9F0D004ED888 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -294,19 +286,11 @@
 			files = (
 				5E9AEAD71766CC40008A820C /* main.m in Sources */,
 				5E9AEADE1766CC40008A820C /* wxballAppDelegate.m in Sources */,
-				5E1ABDF6177B982B00E2857A /* LLManager.m in Sources */,
+				5E8996E2177B9F0D004ED888 /* LLManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5E1ABDFD177B986500E2857A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LaunchAtLoginHelper;
-			targetProxy = 5E1ABDFC177B986500E2857A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5E9AEAD31766CC40008A820C /* InfoPlist.strings */ = {
