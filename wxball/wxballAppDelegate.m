@@ -45,8 +45,6 @@
     //Do the first prediction loading.
     [self loadStatus:nil];
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
-    [LLManager launchAtLogin]; // will the app launch at login?
-    [LLManager setLaunchAtLogin:YES];
 
 
 }
@@ -84,9 +82,6 @@
         NSString *notify=@"no";
         [defaults setObject:notify forKey:@"loadStart"];
         [defaults synchronize];
-        [LLManager launchAtLogin]; // will the app launch at login?
-        [LLManager setLaunchAtLogin:NO];
-        NSLog(@"no");
         
         
     } else {
@@ -94,8 +89,6 @@
         NSString *notify=@"yes";
         [defaults setObject:notify forKey:@"loadStart"];
         [defaults synchronize];
-        [LLManager launchAtLogin]; // will the app launch at login?
-        [LLManager setLaunchAtLogin:YES];
 
     }
     

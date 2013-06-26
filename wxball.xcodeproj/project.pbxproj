@@ -30,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5E5C3164177BA17D005EFD17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E8996DC177B9F0D004ED888 /* LaunchAtLoginHelper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 734C379315414CE200994189;
+			remoteInfo = LaunchAtLoginHelper;
+		};
 		5E8996E4177B9F0D004ED888 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E8996DC177B9F0D004ED888 /* LaunchAtLoginHelper.xcodeproj */;
@@ -207,6 +214,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5E5C3165177BA17D005EFD17 /* PBXTargetDependency */,
 			);
 			name = wxball;
 			productName = wxball;
@@ -291,6 +299,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E5C3165177BA17D005EFD17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LaunchAtLoginHelper;
+			targetProxy = 5E5C3164177BA17D005EFD17 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5E9AEAD31766CC40008A820C /* InfoPlist.strings */ = {
