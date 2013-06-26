@@ -8,6 +8,7 @@
 
 #import "wxballAppDelegate.h"
 #import <ServiceManagement/ServiceManagement.h>
+#import "LLManager.h"
 
 
 @implementation wxballAppDelegate
@@ -44,7 +45,8 @@
     //Do the first prediction loading.
     [self loadStatus:nil];
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
-
+    [LLManager launchAtLogin]; // will the app launch at login?
+    [LLManager setLaunchAtLogin:YES];
 
 
 }
@@ -82,14 +84,9 @@
         NSString *notify=@"no";
         [defaults setObject:notify forKey:@"loadStart"];
         [defaults synchronize];
-        if (!SMLoginItemSetEnabled ((__bridge CFStringRef)@"com.timschroeder.LaunchAtLoginHelperApp", NO)) {
-            NSAlert *alert = [NSAlert alertWithMessageText:@"An error ocurred"
-                                             defaultButton:@"OK"
-                                           alternateButton:nil
-                                               otherButton:nil
-                                 informativeTextWithFormat:@"Couldn't remove Helper App from launch at login item list."];
-            [alert runModal];
-        }
+        [LLManager launchAtLogin]; // will the app launch at login?
+        [LLManager setLaunchAtLogin:NO];
+        NSLog(@"no");
         
         
     } else {
@@ -97,14 +94,8 @@
         NSString *notify=@"yes";
         [defaults setObject:notify forKey:@"loadStart"];
         [defaults synchronize];
-        if (!SMLoginItemSetEnabled ((__bridge CFStringRef)@"com.timschroeder.LaunchAtLoginHelperApp", YES)) {
-            NSAlert *alert = [NSAlert alertWithMessageText:@"An error ocurred"
-                                             defaultButton:@"OK"
-                                           alternateButton:nil
-                                               otherButton:nil
-                                 informativeTextWithFormat:@"Couldn't add Helper App to launch at login item list."];
-            [alert runModal];
-        }
+        [LLManager launchAtLogin]; // will the app launch at login?
+        [LLManager setLaunchAtLogin:YES];
 
     }
     

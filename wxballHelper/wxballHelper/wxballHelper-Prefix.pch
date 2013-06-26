@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'wxballHelper' target in the 'wxballHelper' project
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif

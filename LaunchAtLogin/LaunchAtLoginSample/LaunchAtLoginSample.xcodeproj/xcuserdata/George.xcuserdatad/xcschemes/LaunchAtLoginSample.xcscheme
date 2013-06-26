@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5EF3D9E717781C460002D88F"
-               BuildableName = "wxballHelper.app"
-               BlueprintName = "wxballHelper"
-               ReferencedContainer = "container:wxballHelper.xcodeproj">
+               BlueprintIdentifier = "734C37571541467600994189"
+               BuildableName = "LaunchAtLoginSample.app"
+               BlueprintName = "LaunchAtLoginSample"
+               ReferencedContainer = "container:LaunchAtLoginSample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5EF3D9E717781C460002D88F"
-            BuildableName = "wxballHelper.app"
-            BlueprintName = "wxballHelper"
-            ReferencedContainer = "container:wxballHelper.xcodeproj">
+            BlueprintIdentifier = "734C37571541467600994189"
+            BuildableName = "LaunchAtLoginSample.app"
+            BlueprintName = "LaunchAtLoginSample"
+            ReferencedContainer = "container:LaunchAtLoginSample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5EF3D9E717781C460002D88F"
-            BuildableName = "wxballHelper.app"
-            BlueprintName = "wxballHelper"
-            ReferencedContainer = "container:wxballHelper.xcodeproj">
+            BlueprintIdentifier = "734C37571541467600994189"
+            BuildableName = "LaunchAtLoginSample.app"
+            BlueprintName = "LaunchAtLoginSample"
+            ReferencedContainer = "container:LaunchAtLoginSample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5EF3D9E717781C460002D88F"
-            BuildableName = "wxballHelper.app"
-            BlueprintName = "wxballHelper"
-            ReferencedContainer = "container:wxballHelper.xcodeproj">
+            BlueprintIdentifier = "734C37571541467600994189"
+            BuildableName = "LaunchAtLoginSample.app"
+            BlueprintName = "LaunchAtLoginSample"
+            ReferencedContainer = "container:LaunchAtLoginSample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
