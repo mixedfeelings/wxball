@@ -45,6 +45,9 @@
     //Do the first prediction loading.
     [self loadStatus:nil];
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+    
+    [LLManager launchAtLogin];
+    [LLManager setLaunchAtLogin:YES];
 
 
 }
@@ -82,6 +85,8 @@
         NSString *notify=@"no";
         [defaults setObject:notify forKey:@"loadStart"];
         [defaults synchronize];
+        [LLManager launchAtLogin];
+        [LLManager setLaunchAtLogin:NO];
         
         
     } else {
@@ -89,6 +94,8 @@
         NSString *notify=@"yes";
         [defaults setObject:notify forKey:@"loadStart"];
         [defaults synchronize];
+        [LLManager launchAtLogin];
+        [LLManager setLaunchAtLogin:YES];
 
     }
     
@@ -99,7 +106,7 @@
     
     NSBundle *bundle = [NSBundle mainBundle];
 
-    NSString *url=@"http://george.wietor.com/labs/wxball/status/json/test";
+    NSString *url=@"http://george.wietor.com/labs/wxball/status/json";
     
     NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     

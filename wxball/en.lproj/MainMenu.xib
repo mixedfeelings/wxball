@@ -1418,7 +1418,7 @@
 			<object class="NSUserDefaultsController" id="258362212">
 				<bool key="NSSharedInstance">YES</bool>
 			</object>
-			<object class="NSCustomObject" id="1032604058">
+			<object class="NSCustomObject" id="156811662">
 				<string key="NSClassName">LLManager</string>
 			</object>
 		</array>
@@ -2164,33 +2164,21 @@
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: self.launchAtLogin</string>
 						<reference key="source" ref="763108022"/>
-						<reference key="destination" ref="1032604058"/>
+						<reference key="destination" ref="156811662"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="763108022"/>
-							<reference key="NSDestination" ref="1032604058"/>
+							<reference key="NSDestination" ref="156811662"/>
 							<string key="NSLabel">value: self.launchAtLogin</string>
 							<string key="NSBinding">value</string>
 							<string key="NSKeyPath">self.launchAtLogin</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSAlwaysPresentsApplicationModalAlerts</string>
+								<boolean value="YES" key="NS.object.0"/>
+							</object>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">630</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: values</string>
-						<reference key="source" ref="989458870"/>
-						<reference key="destination" ref="258362212"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="989458870"/>
-							<reference key="NSDestination" ref="258362212"/>
-							<string key="NSLabel">value: values</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">values</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">624</int>
+					<int key="connectionID">634</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -3374,7 +3362,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">625</int>
-						<reference key="object" ref="1032604058"/>
+						<reference key="object" ref="156811662"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</array>
@@ -3566,7 +3554,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">630</int>
+			<int key="maxID">634</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

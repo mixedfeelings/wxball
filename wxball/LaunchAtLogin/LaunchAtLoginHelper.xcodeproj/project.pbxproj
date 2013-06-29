@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E314AC9177E978600EA9A0A /* wxball.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 5E314AC8177E978600EA9A0A /* wxball.iconset */; };
 		734C379915414CE200994189 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734C379815414CE200994189 /* Cocoa.framework */; };
 		73C920E915414E7800C2A75A /* LLHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C920E615414E7800C2A75A /* LLHAppDelegate.m */; };
 		73C920EA15414E7800C2A75A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C920E715414E7800C2A75A /* main.m */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E314AC8177E978600EA9A0A /* wxball.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = wxball.iconset; sourceTree = "<group>"; };
 		734C379415414CE200994189 /* LaunchAtLoginHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchAtLoginHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		734C379815414CE200994189 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		734C379B15414CE200994189 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -41,6 +43,7 @@
 		734C378915414CE200994189 = {
 			isa = PBXGroup;
 			children = (
+				5E314AC8177E978600EA9A0A /* wxball.iconset */,
 				73C920E715414E7800C2A75A /* main.m */,
 				73C920FA15414F7000C2A75A /* LLStrings.h */,
 				73C920E515414E7800C2A75A /* LLHAppDelegate.h */,
@@ -97,7 +100,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = LLH;
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "David Keegan";
 			};
 			buildConfigurationList = 734C378E15414CE200994189 /* Build configuration list for PBXProject "LaunchAtLoginHelper" */;
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73C920EB15414E7800C2A75A /* MainMenu.xib in Resources */,
+				5E314AC9177E978600EA9A0A /* wxball.iconset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +150,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COMBINE_HIDPI_IMAGES = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -174,7 +181,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COMBINE_HIDPI_IMAGES = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
