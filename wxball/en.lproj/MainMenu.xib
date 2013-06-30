@@ -1329,14 +1329,16 @@
 				</array>
 			</object>
 			<object class="NSWindowTemplate" id="876962911">
-				<int key="NSWindowStyleMask">271</int>
+				<int key="NSWindowStyleMask">3</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{109, 578}, {184, 71}}</string>
+				<string key="NSWindowRect">{{109, 578}, {251, 71}}</string>
 				<int key="NSWTFlags">1681392640</int>
 				<string key="NSWindowTitle">Preferences</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
+				<string key="NSWindowContentMaxSize">{184, 71}</string>
+				<string key="NSWindowContentMinSize">{184, 71}</string>
 				<object class="NSView" key="NSWindowView" id="1018968627">
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
@@ -1344,7 +1346,7 @@
 						<object class="NSButton" id="763108022">
 							<reference key="NSNextResponder" ref="1018968627"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{18, 38}, {148, 25}}</string>
+							<string key="NSFrame">{{18, 38}, {215, 25}}</string>
 							<reference key="NSSuperview" ref="1018968627"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="475010763"/>
@@ -1353,7 +1355,7 @@
 							<object class="NSButtonCell" key="NSCell" id="989458870">
 								<int key="NSCellFlags">-2080374784</int>
 								<int key="NSCellFlags2">0</int>
-								<string key="NSContents">Start WXBall at Load</string>
+								<string key="NSContents">Start WXBall on system startup</string>
 								<object class="NSFont" key="NSSupport" id="213982773">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">13</double>
@@ -1405,21 +1407,22 @@
 							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 						</object>
 					</array>
-					<string key="NSFrameSize">{184, 71}</string>
+					<string key="NSFrameSize">{251, 71}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="763108022"/>
 					<string key="NSReuseIdentifierKey">_NS:20</string>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1280, 778}}</string>
-				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
+				<string key="NSMinSize">{184, 93}</string>
+				<string key="NSMaxSize">{184, 93}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 			<object class="NSUserDefaultsController" id="258362212">
 				<bool key="NSSharedInstance">YES</bool>
 			</object>
-			<object class="NSCustomObject" id="156811662">
-				<string key="NSClassName">LLManager</string>
+			<object class="NSCustomObject" id="102640314">
+				<string key="NSClassName">LaunchAtLoginController</string>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -2162,23 +2165,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: self.launchAtLogin</string>
+						<string key="label">value: launchAtLogin</string>
 						<reference key="source" ref="763108022"/>
-						<reference key="destination" ref="156811662"/>
+						<reference key="destination" ref="102640314"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="763108022"/>
-							<reference key="NSDestination" ref="156811662"/>
-							<string key="NSLabel">value: self.launchAtLogin</string>
+							<reference key="NSDestination" ref="102640314"/>
+							<string key="NSLabel">value: launchAtLogin</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">self.launchAtLogin</string>
-							<object class="NSDictionary" key="NSOptions">
-								<string key="NS.key.0">NSAlwaysPresentsApplicationModalAlerts</string>
-								<boolean value="YES" key="NS.object.0"/>
-							</object>
+							<string key="NSKeyPath">launchAtLogin</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">634</int>
+					<int key="connectionID">638</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -3361,8 +3360,8 @@
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">625</int>
-						<reference key="object" ref="156811662"/>
+						<int key="objectID">635</int>
+						<reference key="object" ref="102640314"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</array>
@@ -3537,7 +3536,7 @@
 				<string key="589.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="607.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="612.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="625.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="635.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="72.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="73.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="74.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3554,16 +3553,16 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">634</int>
+			<int key="maxID">638</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
-					<string key="className">LLManager</string>
+					<string key="className">LaunchAtLoginController</string>
 					<string key="superclassName">NSObject</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/LLManager.h</string>
+						<string key="minorKey">./Classes/LaunchAtLoginController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

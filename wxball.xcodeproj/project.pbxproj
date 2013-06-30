@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E8996E2177B9F0D004ED888 /* LLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8996E0177B9F0D004ED888 /* LLManager.m */; };
-		5E8996E6177B9F3F004ED888 /* LaunchAtLoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5E8996E5177B9F0D004ED888 /* LaunchAtLoginHelper.app */; };
+		5E5EF6491780B989008DF611 /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5EF6481780B989008DF611 /* LaunchAtLoginController.m */; };
 		5E940FD51772D304005A2D34 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCC1772D304005A2D34 /* black.png */; };
 		5E940FD61772D304005A2D34 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCD1772D304005A2D34 /* blue.png */; };
 		5E940FD71772D304005A2D34 /* blue_blink.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCE1772D304005A2D34 /* blue_blink.png */; };
@@ -25,26 +24,7 @@
 		5E9AEADB1766CC40008A820C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5E9AEAD91766CC40008A820C /* Credits.rtf */; };
 		5E9AEADE1766CC40008A820C /* wxballAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9AEADD1766CC40008A820C /* wxballAppDelegate.m */; };
 		5E9AEAE11766CC40008A820C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9AEADF1766CC40008A820C /* MainMenu.xib */; };
-		5EF3D9DD17781A610002D88F /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF3D9DC17781A610002D88F /* ServiceManagement.framework */; };
-		5EF3D9DE17781A670002D88F /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF3D9D817780B890002D88F /* ApplicationServices.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5E5C3164177BA17D005EFD17 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5E8996DC177B9F0D004ED888 /* LaunchAtLoginHelper.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 734C379315414CE200994189;
-			remoteInfo = LaunchAtLoginHelper;
-		};
-		5E8996E4177B9F0D004ED888 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5E8996DC177B9F0D004ED888 /* LaunchAtLoginHelper.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 734C379415414CE200994189;
-			remoteInfo = LaunchAtLoginHelper;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		5EF3DA0E17781C940002D88F /* CopyFiles */ = {
@@ -53,17 +33,14 @@
 			dstPath = Contents/Library/Loginitems;
 			dstSubfolderSpec = 1;
 			files = (
-				5E8996E6177B9F3F004ED888 /* LaunchAtLoginHelper.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5E8996DC177B9F0D004ED888 /* LaunchAtLoginHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LaunchAtLoginHelper.xcodeproj; path = wxball/LaunchAtLogin/LaunchAtLoginHelper.xcodeproj; sourceTree = "<group>"; };
-		5E8996DF177B9F0D004ED888 /* LLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLManager.h; path = wxball/LaunchAtLogin/LLManager.h; sourceTree = "<group>"; };
-		5E8996E0177B9F0D004ED888 /* LLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLManager.m; path = wxball/LaunchAtLogin/LLManager.m; sourceTree = "<group>"; };
-		5E8996E1177B9F0D004ED888 /* LLStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLStrings.h; path = wxball/LaunchAtLogin/LLStrings.h; sourceTree = "<group>"; };
+		5E5EF6471780B988008DF611 /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
+		5E5EF6481780B989008DF611 /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
 		5E940FCC1772D304005A2D34 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
 		5E940FCD1772D304005A2D34 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		5E940FCE1772D304005A2D34 /* blue_blink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_blink.png; sourceTree = "<group>"; };
@@ -87,8 +64,6 @@
 		5E9AEADC1766CC40008A820C /* wxballAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wxballAppDelegate.h; sourceTree = "<group>"; };
 		5E9AEADD1766CC40008A820C /* wxballAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wxballAppDelegate.m; sourceTree = "<group>"; };
 		5E9AEAE01766CC40008A820C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		5EF3D9D817780B890002D88F /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
-		5EF3D9DC17781A610002D88F /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		5EF3DA1017781CE70002D88F /* wxball.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = wxball.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,23 +72,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EF3D9DD17781A610002D88F /* ServiceManagement.framework in Frameworks */,
 				5E9AEACB1766CC40008A820C /* Cocoa.framework in Frameworks */,
-				5EF3D9DE17781A670002D88F /* ApplicationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E8996DD177B9F0D004ED888 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5E8996E5177B9F0D004ED888 /* LaunchAtLoginHelper.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		5E940FCB1772D304005A2D34 /* status */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,12 +99,6 @@
 		5E9AEABE1766CC40008A820C = {
 			isa = PBXGroup;
 			children = (
-				5E8996DC177B9F0D004ED888 /* LaunchAtLoginHelper.xcodeproj */,
-				5E8996DF177B9F0D004ED888 /* LLManager.h */,
-				5E8996E0177B9F0D004ED888 /* LLManager.m */,
-				5E8996E1177B9F0D004ED888 /* LLStrings.h */,
-				5EF3D9DC17781A610002D88F /* ServiceManagement.framework */,
-				5EF3D9D817780B890002D88F /* ApplicationServices.framework */,
 				5E9AEAD01766CC40008A820C /* wxball */,
 				5E9AEAC91766CC40008A820C /* Frameworks */,
 				5E9AEAC81766CC40008A820C /* Products */,
@@ -176,6 +135,8 @@
 		5E9AEAD01766CC40008A820C /* wxball */ = {
 			isa = PBXGroup;
 			children = (
+				5E5EF6471780B988008DF611 /* LaunchAtLoginController.h */,
+				5E5EF6481780B989008DF611 /* LaunchAtLoginController.m */,
 				5EF3DA1017781CE70002D88F /* wxball.entitlements */,
 				5E940FDE1772D485005A2D34 /* wxball.iconset */,
 				5E940FCB1772D304005A2D34 /* status */,
@@ -214,7 +175,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				5E5C3165177BA17D005EFD17 /* PBXTargetDependency */,
 			);
 			name = wxball;
 			productName = wxball;
@@ -241,28 +201,12 @@
 			mainGroup = 5E9AEABE1766CC40008A820C;
 			productRefGroup = 5E9AEAC81766CC40008A820C /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 5E8996DD177B9F0D004ED888 /* Products */;
-					ProjectRef = 5E8996DC177B9F0D004ED888 /* LaunchAtLoginHelper.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				5E9AEAC61766CC40008A820C /* wxball */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		5E8996E5177B9F0D004ED888 /* LaunchAtLoginHelper.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = LaunchAtLoginHelper.app;
-			remoteRef = 5E8996E4177B9F0D004ED888 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5E9AEAC51766CC40008A820C /* Resources */ = {
@@ -294,19 +238,11 @@
 			files = (
 				5E9AEAD71766CC40008A820C /* main.m in Sources */,
 				5E9AEADE1766CC40008A820C /* wxballAppDelegate.m in Sources */,
-				5E8996E2177B9F0D004ED888 /* LLManager.m in Sources */,
+				5E5EF6491780B989008DF611 /* LaunchAtLoginController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5E5C3165177BA17D005EFD17 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LaunchAtLoginHelper;
-			targetProxy = 5E5C3164177BA17D005EFD17 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5E9AEAD31766CC40008A820C /* InfoPlist.strings */ = {

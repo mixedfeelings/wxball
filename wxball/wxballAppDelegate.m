@@ -8,7 +8,6 @@
 
 #import "wxballAppDelegate.h"
 #import <ServiceManagement/ServiceManagement.h>
-#import "LLManager.h"
 
 
 @implementation wxballAppDelegate
@@ -25,11 +24,6 @@
     [statusItem setHighlightMode:YES];
     [statusItem setEnabled:YES];
     [statusItem setMenu:statusMenu];
-    
-    BOOL startedAtLogin = NO;
-    for (NSString *arg in [[NSProcessInfo processInfo] arguments]) {
-        if ([arg isEqualToString:@"launchWxball"]) startedAtLogin = YES;
-    }
 
 }
 
@@ -45,11 +39,11 @@
     //Do the first prediction loading.
     [self loadStatus:nil];
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+
     
-    [LLManager launchAtLogin];
-    [LLManager setLaunchAtLogin:YES];
+    checkLoadStart.target = self;
 
-
+    
 }
 
 - (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center
@@ -79,24 +73,20 @@
 
 -(IBAction)checkBoxLoadStartState:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        
+    
+    
     if ([checkLoadStart state] == NSOffState) {
         
         NSString *notify=@"no";
         [defaults setObject:notify forKey:@"loadStart"];
         [defaults synchronize];
-        [LLManager launchAtLogin];
-        [LLManager setLaunchAtLogin:NO];
-        
         
     } else {
         
         NSString *notify=@"yes";
         [defaults setObject:notify forKey:@"loadStart"];
         [defaults synchronize];
-        [LLManager launchAtLogin];
-        [LLManager setLaunchAtLogin:YES];
-
+        
     }
     
 }

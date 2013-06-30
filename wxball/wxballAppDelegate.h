@@ -17,6 +17,7 @@
     NSImage *statusImage;
     NSStatusItem *statusItem;
     NSWindow *preferences;
+    LSSharedFileListRef loginItemsListRef;
 }
 
 //@property (assign) IBOutlet NSWindow *window;
@@ -25,8 +26,6 @@
 -(IBAction)checkBoxNotificationsState:(id)sender;
 -(IBAction)checkBoxLoadStartState:(id)sender;
 -(IBAction)toggleLaunchAtLogin:(id)sender;
-
-
 
 @end
 
