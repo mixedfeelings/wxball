@@ -25,7 +25,6 @@
 -(IBAction)loadStatus:(id)sender;
 -(IBAction)checkBoxNotificationsState:(id)sender;
 -(IBAction)checkBoxLoadStartState:(id)sender;
--(IBAction)toggleLaunchAtLogin:(id)sender;
 
 @end
 

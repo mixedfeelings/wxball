@@ -24,8 +24,12 @@
     [statusItem setHighlightMode:YES];
     [statusItem setEnabled:YES];
     [statusItem setMenu:statusMenu];
+    [preferences setLevel:NSFloatingWindowLevel];
+    [NSApp activateIgnoringOtherApps:YES];
+
 
 }
+
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 
@@ -40,8 +44,15 @@
     [self loadStatus:nil];
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
 
-    
     checkLoadStart.target = self;
+
+    if (floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_7) {
+            
+        checkNotifications.enabled = NO;
+        
+    }
+    [preferences setLevel:NSFloatingWindowLevel];
+    [NSApp activateIgnoringOtherApps:YES];
 
     
 }
