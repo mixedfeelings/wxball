@@ -11,6 +11,8 @@
 		5E67A8BE178AA72100C199B7 /* hid.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E67A8BC178AA72100C199B7 /* hid.c */; };
 		5E67A8C1178AA74E00C199B7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E67A8BF178AA74E00C199B7 /* CoreFoundation.framework */; };
 		5E67A8C2178AA74E00C199B7 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E67A8C0178AA74E00C199B7 /* IOKit.framework */; };
+		5E6F5852178B7C0B00D439BC /* blink1-lib.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F5850178B7C0B00D439BC /* blink1-lib.c */; };
+		5E6F5855178B7EA600D439BC /* blink1-tool.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F5854178B7EA600D439BC /* blink1-tool.c */; };
 		5E940FD51772D304005A2D34 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCC1772D304005A2D34 /* black.png */; };
 		5E940FD61772D304005A2D34 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCD1772D304005A2D34 /* blue.png */; };
 		5E940FD71772D304005A2D34 /* blue_blink.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCE1772D304005A2D34 /* blue_blink.png */; };
@@ -48,6 +50,10 @@
 		5E67A8BD178AA72100C199B7 /* hidapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hidapi.h; sourceTree = "<group>"; };
 		5E67A8BF178AA74E00C199B7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreFoundation.framework; sourceTree = "<group>"; };
 		5E67A8C0178AA74E00C199B7 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IOKit.framework; sourceTree = "<group>"; };
+		5E6F5850178B7C0B00D439BC /* blink1-lib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "blink1-lib.c"; sourceTree = "<group>"; };
+		5E6F5851178B7C0B00D439BC /* blink1-lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "blink1-lib.h"; sourceTree = "<group>"; };
+		5E6F5853178B7DEA00D439BC /* usbconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = usbconfig.h; sourceTree = "<group>"; };
+		5E6F5854178B7EA600D439BC /* blink1-tool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "blink1-tool.c"; sourceTree = "<group>"; };
 		5E940FCC1772D304005A2D34 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
 		5E940FCD1772D304005A2D34 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		5E940FCE1772D304005A2D34 /* blue_blink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_blink.png; sourceTree = "<group>"; };
@@ -147,7 +153,11 @@
 			isa = PBXGroup;
 			children = (
 				5E67A8BC178AA72100C199B7 /* hid.c */,
+				5E6F5853178B7DEA00D439BC /* usbconfig.h */,
 				5E67A8BD178AA72100C199B7 /* hidapi.h */,
+				5E6F5854178B7EA600D439BC /* blink1-tool.c */,
+				5E6F5850178B7C0B00D439BC /* blink1-lib.c */,
+				5E6F5851178B7C0B00D439BC /* blink1-lib.h */,
 				5E5EF6471780B988008DF611 /* LaunchAtLoginController.h */,
 				5E5EF6481780B989008DF611 /* LaunchAtLoginController.m */,
 				5EF3DA1017781CE70002D88F /* wxball.entitlements */,
@@ -253,6 +263,8 @@
 				5E9AEADE1766CC40008A820C /* wxballAppDelegate.m in Sources */,
 				5E5EF6491780B989008DF611 /* LaunchAtLoginController.m in Sources */,
 				5E67A8BE178AA72100C199B7 /* hid.c in Sources */,
+				5E6F5852178B7C0B00D439BC /* blink1-lib.c in Sources */,
+				5E6F5855178B7EA600D439BC /* blink1-tool.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

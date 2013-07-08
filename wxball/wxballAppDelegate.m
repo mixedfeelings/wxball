@@ -10,6 +10,7 @@
 #import <ServiceManagement/ServiceManagement.h>
 // local HIDAPI library
 #include "hidapi.h"
+#include "blink1-lib.h"
 
 
 @implementation wxballAppDelegate
