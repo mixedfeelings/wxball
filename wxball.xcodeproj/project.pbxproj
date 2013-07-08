@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5E5EF6491780B989008DF611 /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5EF6481780B989008DF611 /* LaunchAtLoginController.m */; };
+		5E67A8BE178AA72100C199B7 /* hid.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E67A8BC178AA72100C199B7 /* hid.c */; };
+		5E67A8C1178AA74E00C199B7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E67A8BF178AA74E00C199B7 /* CoreFoundation.framework */; };
+		5E67A8C2178AA74E00C199B7 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E67A8C0178AA74E00C199B7 /* IOKit.framework */; };
 		5E940FD51772D304005A2D34 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCC1772D304005A2D34 /* black.png */; };
 		5E940FD61772D304005A2D34 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCD1772D304005A2D34 /* blue.png */; };
 		5E940FD71772D304005A2D34 /* blue_blink.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E940FCE1772D304005A2D34 /* blue_blink.png */; };
@@ -41,6 +44,10 @@
 /* Begin PBXFileReference section */
 		5E5EF6471780B988008DF611 /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
 		5E5EF6481780B989008DF611 /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
+		5E67A8BC178AA72100C199B7 /* hid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hid.c; sourceTree = "<group>"; };
+		5E67A8BD178AA72100C199B7 /* hidapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hidapi.h; sourceTree = "<group>"; };
+		5E67A8BF178AA74E00C199B7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreFoundation.framework; sourceTree = "<group>"; };
+		5E67A8C0178AA74E00C199B7 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IOKit.framework; sourceTree = "<group>"; };
 		5E940FCC1772D304005A2D34 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
 		5E940FCD1772D304005A2D34 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		5E940FCE1772D304005A2D34 /* blue_blink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_blink.png; sourceTree = "<group>"; };
@@ -73,6 +80,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E9AEACB1766CC40008A820C /* Cocoa.framework in Frameworks */,
+				5E67A8C1178AA74E00C199B7 /* CoreFoundation.framework in Frameworks */,
+				5E67A8C2178AA74E00C199B7 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +108,8 @@
 		5E9AEABE1766CC40008A820C = {
 			isa = PBXGroup;
 			children = (
+				5E67A8BF178AA74E00C199B7 /* CoreFoundation.framework */,
+				5E67A8C0178AA74E00C199B7 /* IOKit.framework */,
 				5E9AEAD01766CC40008A820C /* wxball */,
 				5E9AEAC91766CC40008A820C /* Frameworks */,
 				5E9AEAC81766CC40008A820C /* Products */,
@@ -135,6 +146,8 @@
 		5E9AEAD01766CC40008A820C /* wxball */ = {
 			isa = PBXGroup;
 			children = (
+				5E67A8BC178AA72100C199B7 /* hid.c */,
+				5E67A8BD178AA72100C199B7 /* hidapi.h */,
 				5E5EF6471780B988008DF611 /* LaunchAtLoginController.h */,
 				5E5EF6481780B989008DF611 /* LaunchAtLoginController.m */,
 				5EF3DA1017781CE70002D88F /* wxball.entitlements */,
@@ -239,6 +252,7 @@
 				5E9AEAD71766CC40008A820C /* main.m in Sources */,
 				5E9AEADE1766CC40008A820C /* wxballAppDelegate.m in Sources */,
 				5E5EF6491780B989008DF611 /* LaunchAtLoginController.m in Sources */,
+				5E67A8BE178AA72100C199B7 /* hid.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +350,10 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = wxball/wxball.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wxball/wxball-Prefix.pch";
 				INFOPLIST_FILE = "wxball/wxball-Info.plist";
@@ -350,6 +368,10 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = wxball/wxball.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wxball/wxball-Prefix.pch";
 				INFOPLIST_FILE = "wxball/wxball-Info.plist";

@@ -9,11 +9,14 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface wxballAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate> {
+@interface wxballAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate, NSTextFieldDelegate> {
     
     IBOutlet NSMenu *statusMenu;
     IBOutlet NSButton *checkNotifications;
     IBOutlet NSButton *checkLoadStart;
+    IBOutlet NSTextField *zipCode;
+    IBOutlet NSMatrix *locationSelect;
+    
     NSImage *statusImage;
     NSStatusItem *statusItem;
     NSWindow *preferences;
@@ -23,8 +26,18 @@
 //@property (assign) IBOutlet NSWindow *window;
 
 -(IBAction)loadStatus:(id)sender;
+-(IBAction)locationSelect:(id)sender;
+-(IBAction)saveZipCode:(id)sender;
+-(IBAction)loadLatLong:(id)sender;
 -(IBAction)checkBoxNotificationsState:(id)sender;
 -(IBAction)checkBoxLoadStartState:(id)sender;
+-(IBAction)setRed:(id)sender;
+-(IBAction)setGreen:(id)sender;
+-(IBAction)setBlue:(id)sender;
+-(IBAction)setRedBlink:(id)sender;
+-(IBAction)setGreenBlink:(id)sender;
+-(IBAction)setBlueBlink:(id)sender;
+
 
 @end
 
