@@ -8,15 +8,20 @@
 
 #import "wxballAppDelegate.h"
 #import <ServiceManagement/ServiceManagement.h>
-// local HIDAPI library
-#include "hidapi.h"
-#include "blink1-lib.h"
 
 
 @implementation wxballAppDelegate
 
+- (Blink1 *)blink {
+    if (!_blink) {
+        _blink = [Blink1 new];
+    };
+    [_blink enumerate];
+    return _blink;
+}
+
 - (void)awakeFromNib {
-   
+    
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
     NSBundle *bundle = [NSBundle mainBundle];
@@ -59,6 +64,10 @@
     [NSApp activateIgnoringOtherApps:YES];
 
     
+}
+
+- (void)applicationWillTerminate:(NSNotification *)notification {
+    [[self blink] fadeToRGBstr:@"#000000" atTime:0];
 }
 
 - (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center
@@ -449,6 +458,8 @@
     
     [defaults setObject:status forKey:@"lastStatus"];
     [defaults synchronize];
+    
+    [[self blink] fadeToRGBstr:@"#FF0000" atTime:0];
 }
 
 -(IBAction)setGreen:(id)sender {
@@ -480,6 +491,8 @@
    
     [defaults setObject:status forKey:@"lastStatus"];
     [defaults synchronize];
+    
+    [[self blink] fadeToRGBstr:@"#00CC00" atTime:0];
 }
 
 -(IBAction)setBlue:(id)sender {
@@ -512,6 +525,8 @@
     [defaults setObject:status forKey:@"lastStatus"];
     [defaults synchronize];
     
+    [[self blink] fadeToRGBstr:@"#0000FF" atTime:0];
+    
 }
 
 -(IBAction)setRedBlink:(id)sender {
@@ -543,6 +558,38 @@
     [defaults setObject:status forKey:@"lastStatus"];
     [defaults synchronize];
     
+    [self performSelectorInBackground:@selector(blinkRed:) withObject:nil];
+
+}
+
+-(void)blinkRed:(id)sender {
+    
+    while(_blink) {
+        [[self blink] fadeToRGBstr:@"#FF0000" atTime:0];
+        sleep(2);
+        [[self blink] fadeToRGBstr:@"#000000" atTime:0];
+        sleep(2);
+    }
+}
+
+-(void)blinkGreen:(id)sender {
+    
+    while(_blink) {
+        [[self blink] fadeToRGBstr:@"#00CC00" atTime:0];
+        sleep(2);
+        [[self blink] fadeToRGBstr:@"#000000" atTime:0];
+        sleep(2);
+    }
+}
+
+-(void)blinkBlue:(id)sender {
+    
+    while(_blink) {
+        [[self blink] fadeToRGBstr:@"#0000FF" atTime:0];
+        sleep(2);
+        [[self blink] fadeToRGBstr:@"#000000" atTime:0];
+        sleep(2);
+    }
 }
 
 -(IBAction)setGreenBlink:(id)sender {
@@ -573,6 +620,9 @@
     
     [defaults setObject:status forKey:@"lastStatus"];
     [defaults synchronize];
+    
+    [self performSelectorInBackground:@selector(blinkGreen:) withObject:nil];
+
 }
 
 -(IBAction)setBlueBlink:(id)sender {
@@ -602,6 +652,9 @@
     
     [defaults setObject:status forKey:@"lastStatus"];
     [defaults synchronize];
+    
+    [self performSelectorInBackground:@selector(blinkBlue:) withObject:nil];
+
 
 }
 

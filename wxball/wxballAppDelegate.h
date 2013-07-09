@@ -7,15 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#include "Blink1.h"
 
 
-@interface wxballAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate, NSTextFieldDelegate> {
+
+@interface wxballAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate, NSTextFieldDelegate, NSSharingServiceDelegate> {
     
     IBOutlet NSMenu *statusMenu;
     IBOutlet NSButton *checkNotifications;
     IBOutlet NSButton *checkLoadStart;
     IBOutlet NSTextField *zipCode;
     IBOutlet NSMatrix *locationSelect;
+    Blink1 *_blink;
+
     
     NSImage *statusImage;
     NSStatusItem *statusItem;
